@@ -1,2 +1,52 @@
 <p>parent COMPONENT!</p>
-<app-child [murid]="namaMurid" (lihatData)="showData($event)"></app-child>
+<!-- <app-child [murid]="namaMurid" (lihatData)="showData($event)"></app-child> -->
+
+
+
+
+<!-- directive ngIf -->
+ <!-- jika kursus true, maka tulisan kursus tidak tampil -->
+<!-- <div *ngIf="statusKursus === 0">Kursus Angular</div>
+<div *ngIf="statusKursus === 1">Kursus Ionic</div> -->
+
+<!-- ngClass = kondisi A : status-berhasil : status-gagal -->
+ <!-- 
+    if(selesai) {
+    class="status-berhasil"
+    } else {
+    class="status-gagal" 
+    }
+ -->
+<!-- <div [ngClass]="statusKursus === 1 ? 'status-selesai' : 'status-gagal'">Status Kursus</div> -->
+
+
+<!-- ngFor -->
+ <!-- <div>List Materi Angular</div>
+ <div *ngFor="let materi of materiAngular">
+    {{materi}}
+ </div> -->
+ <!-- {{materiAngular}} -->
+
+ <div>List Pegawai</div>
+ <div *ngFor="let pegawai of daftarPegawai; let i = index;">
+    {{i + 1}}
+    {{pegawai.name}}
+    <div *ngFor="let tugas of pegawai.tugas">
+        {{tugas.tugasJabatan}}
+    </div>
+ </div>
+
+ <!-- pipe -->
+<div>Nama Murid : {{namaMurid | textTransform}}</div>
+<div>Tanggal : {{tanggal | date: 'dd MMM yyyy, HH:mm'}}</div>
+<div>Gaji: {{gaji | number: '1.2'}}</div>
+
+<!-- pipe text transform ke Uppertext (huruf besar semua) -->
+
+<!-- aplikasi directive & pipe -->
+
+
+ 
+
+
+ 
