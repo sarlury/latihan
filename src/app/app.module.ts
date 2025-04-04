@@ -12,6 +12,7 @@ import { TextTransformPipe } from './pipe/text-transform.pipe';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { MuridComponent } from './pages/murid/murid.component';
 import { KelasComponent } from './pages/kelas/kelas.component';
+import { ReativeFormsComponent } from './pertemuan 6/reative-forms/reative-forms.component';
 
 @NgModule({
   declarations: [
@@ -22,7 +23,8 @@ import { KelasComponent } from './pages/kelas/kelas.component';
     ParentComponent,
     TextTransformPipe,
     MuridComponent,
-    KelasComponent
+    KelasComponent,
+    ReativeFormsComponent
   ],
   imports: [
     BrowserModule,

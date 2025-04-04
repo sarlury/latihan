@@ -111,11 +111,11 @@ export class ParentComponent implements OnInit {
     console.log('Password:', this.password)
     console.log('Date:', this.date)
     this.showName = this.contohNgModel;
-    // if(this.contohNgModel === '') {
-    //   this.showErrorMsg = true;
-    // } else {
-    //   this.showErrorMsg = false;
-    // }
+    if(this.contohNgModel === '') {
+      this.showErrorMsg = true;
+    } else {
+      this.showErrorMsg = false;
+    }
   }
 
 }

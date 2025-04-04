@@ -1,0 +1,41 @@
+<!-- <form [formGroup]="formPendaftaran" class="form-pendaftaran">
+    <label for="name">Name</label>
+    <input type="text" class="form-control" formControlName="name">
+    <div *ngIf="formPendaftaran.get('name')?.invalid && formPendaftaran.get('name')?.touched" class="err-msg">Nama tidak boleh kosong.</div>
+    <label for="email">Email</label>
+    <input type="email" class="form-control" formControlName="email">
+    <div *ngIf="formPendaftaran.get('email')?.value === '' && formPendaftaran.get('email')?.touched"  class="err-msg">Email tidak boleh kosong</div>
+    <div *ngIf="formPendaftaran.get('email')?.invalid"  class="err-msg">email salah</div>
+
+    <label for="password">password</label>
+    <input type="password" class="form-control" formControlName="password">
+    <div *ngIf="formPendaftaran.get('password')?.invalid && formPendaftaran.get('password')?.touched"  class="err-msg">Password tidak boleh kosong.</div>
+
+    <button class="btn btn-primary" (click)="save()">Simpan</button>
+</form> -->
+
+<!-- reactive form -->
+
+<form [formGroup]="formMurid" class="form-murid">
+    <!-- input -->
+    <label for="name">Nama</label>
+    <input type="text" class="form-control" formControlName="nama">
+    <div class="err-msg" *ngIf="formMurid.get('nama')?.invalid && formMurid.get('nama')?.touched">Nama tidak boleh kosong!</div>
+
+    <label for="email">Email</label>
+    <input type="email" class="form-control" formControlName="email">
+    <div class="err-msg" *ngIf="formMurid.get('email')?.value === '' && formMurid.get('email')?.touched">Email tidak boleh kosong!</div>
+    <div class="err-msg" *ngIf="formMurid.get('email')?.invalid">Format Email salah!</div>
+
+    <label for="alamat">Alamat</label> 
+    <input type="text" class="form-control" formControlName="alamat">
+    <div class="err-msg" *ngIf="formMurid.get('alamat')?.invalid && formMurid.get('alamat')?.touched">alamat tidak boleh kosong!</div>
+
+    <label for="password">Password</label>
+    <input type="password" class="form-control" formControlName="password">
+    <div class="err-msg" *ngIf="formMurid.get('password')?.invalid && formMurid.get('password')?.touched">password tidak boleh kosong!</div>
+
+    <button (click)="simpan()">Simpan</button>
+
+
+</form>
