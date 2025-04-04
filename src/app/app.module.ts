@@ -1,5 +1,6 @@
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
+import { CommonModule } from '@angular/common';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
@@ -8,7 +9,9 @@ import { LoginDashboardComponent } from './pages/login-dashboard/login-dashboard
 import { ChildComponent } from './pages/child/child.component';
 import { ParentComponent } from './pages/parent/parent.component';
 import { TextTransformPipe } from './pipe/text-transform.pipe';
-import { CommonModule } from '@angular/common';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
+import { MuridComponent } from './pages/murid/murid.component';
+import { KelasComponent } from './pages/kelas/kelas.component';
 
 @NgModule({
   declarations: [
@@ -17,11 +20,16 @@ import { CommonModule } from '@angular/common';
     LoginDashboardComponent,
     ChildComponent,
     ParentComponent,
-    TextTransformPipe
+    TextTransformPipe,
+    MuridComponent,
+    KelasComponent
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule
+    AppRoutingModule, 
+    FormsModule,
+    ReactiveFormsModule,
+    CommonModule
   ],
   providers: [],
   bootstrap: [AppComponent]

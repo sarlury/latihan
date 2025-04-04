@@ -1,5 +1,5 @@
 <p>parent COMPONENT!</p>
-<!-- <app-child [murid]="namaMurid" (lihatData)="showData($event)"></app-child> -->
+<app-child [murid]="namaMurid" (lihatData)="showData($event)"></app-child>
 
 
 
@@ -27,25 +27,41 @@
  </div> -->
  <!-- {{materiAngular}} -->
 
- <div>List Pegawai</div>
+ <!-- <div>List Pegawai</div>
  <div *ngFor="let pegawai of daftarPegawai; let i = index;">
     {{i + 1}}
     {{pegawai.name}}
     <div *ngFor="let tugas of pegawai.tugas">
         {{tugas.tugasJabatan}}
     </div>
- </div>
+ </div> -->
 
  <!-- pipe -->
-<div>Nama Murid : {{namaMurid | textTransform}}</div>
+<!-- <div>Nama Murid : {{namaMurid | textTransform}}</div>
 <div>Tanggal : {{tanggal | date: 'dd MMM yyyy, HH:mm'}}</div>
-<div>Gaji: {{gaji | number: '1.2'}}</div>
+<div>Gaji: {{gaji | number: '1.2'}}</div> -->
 
 <!-- pipe text transform ke Uppertext (huruf besar semua) -->
 
 <!-- aplikasi directive & pipe -->
 
+<!-- <form></form> -->
+<!-- <label for="input">Input</label>
+<input type="text" class="form-control" [(ngModel)]="ngModelValue">
+<button (click)="simpan()">simpan</button> -->
 
+<!-- <label>Input Nama</label>
+<input type="text" class="form-control" [(ngModel)]="contohNgModel"> -->
+<!-- <div class="err-msg" *ngIf="contohNgModel === ''">Form ini tidak boleh kosong!</div> -->
+<!-- <label>Input Password</label>
+<input type="password" class="form-control" [(ngModel)]="password">
+<div class="err-msg" *ngIf="showErrorMsg === true">Password tidak boleh kosong!</div>
+
+
+<label>Input Tanggal</label>
+<input type="date" class="form-control" [(ngModel)]="date"> -->
+<!-- <button (click)="simpan()">Simpan</button>
+{{showName}} -->
  
 
 

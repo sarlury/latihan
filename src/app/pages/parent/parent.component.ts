@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { FormBuilder } from '@angular/forms';
 
 @Component({
   selector: 'app-parent',
@@ -7,12 +8,18 @@ import { Component, OnInit } from '@angular/core';
   styleUrl: './parent.component.scss'
 })
 export class ParentComponent implements OnInit {
-  namaMurid: string = 'jemy';
+  namaMurid: string = '';
   tanggal: any;
   gaji = 10000000;
   // buat kondisi
   statusKursusAngular!: boolean;
   statusKursusIonic: boolean = false;
+  contohNgModel: string = '';
+  password: string = '';
+  date: string = '';
+
+  showErrorMsg: boolean = false;
+  showName!: string;
 
   statusKursus: number = 0;
   // statusKursus: string = 'Angular';
@@ -81,6 +88,7 @@ export class ParentComponent implements OnInit {
 
 
   constructor(
+    private formBuilder: FormBuilder
   ){}
 
   ngOnInit(): void {
@@ -88,15 +96,26 @@ export class ParentComponent implements OnInit {
     // this.namaMurid = 'Jemy';
     this.tanggal = new Date();
     console.log('tanggal', this.tanggal)
+    // panggil API call: 
+    // const dataDariApi = 'Jemy Sarlury';
+    // this.contohNgModel = dataDariApi;
   }
 
   showData(event: any){
-    this.namaMurid = 'Jemy';
+    this.namaMurid = '';
     console.log(event)
   }
 
-  save(){
-    
+  simpan(){
+    console.log('ngModel', this.contohNgModel)
+    console.log('Password:', this.password)
+    console.log('Date:', this.date)
+    this.showName = this.contohNgModel;
+    // if(this.contohNgModel === '') {
+    //   this.showErrorMsg = true;
+    // } else {
+    //   this.showErrorMsg = false;
+    // }
   }
 
 }
