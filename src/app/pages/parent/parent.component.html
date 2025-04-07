@@ -1,7 +1,8 @@
 <p>parent COMPONENT!</p>
-<app-child [murid]="namaMurid" (lihatData)="showData($event)"></app-child>
+<!-- <app-child [murid]="namaMurid" (lihatData)="showData($event)"></app-child> -->
 
-
+<button (click)="goToChild()">Go to Child</button>
+<div class="child-link" routerLink="/child">Ini Link ke Child</div>
 
 
 <!-- directive ngIf -->
@@ -50,7 +51,7 @@
 <input type="text" class="form-control" [(ngModel)]="ngModelValue">
 <button (click)="simpan()">simpan</button> -->
 
-<label>Input Nama</label>
+<!-- <label>Input Nama</label>
 <input type="text" class="form-control" [(ngModel)]="contohNgModel">
 <div class="err-msg" *ngIf="contohNgModel === ''">Form ini tidak boleh kosong!</div>
 <label>Input Password</label>
@@ -62,7 +63,7 @@
 <input type="date" class="form-control" [(ngModel)]="date">
 <button (click)="simpan()">Simpan</button>
 {{showName}}
- 
+  -->
 
 
  

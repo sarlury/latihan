@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { FormBuilder } from '@angular/forms';
+import { Route, Router } from '@angular/router';
 
 @Component({
   selector: 'app-parent',
@@ -88,7 +89,8 @@ export class ParentComponent implements OnInit {
 
 
   constructor(
-    private formBuilder: FormBuilder
+    private formBuilder: FormBuilder,
+    private router: Router
   ){}
 
   ngOnInit(): void {
@@ -116,6 +118,15 @@ export class ParentComponent implements OnInit {
     } else {
       this.showErrorMsg = false;
     }
+  }
+
+  goToChild(){
+    const data = {
+      nama: 'Jemy', 
+      posisi: 'Trainer'
+    }
+
+    this.router.navigate(['/child'], {queryParams: data})
   }
 
 }

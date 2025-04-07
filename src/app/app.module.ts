@@ -13,25 +13,32 @@ import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { MuridComponent } from './pages/murid/murid.component';
 import { KelasComponent } from './pages/kelas/kelas.component';
 import { ReativeFormsComponent } from './pertemuan 6/reative-forms/reative-forms.component';
+import { ParentModulePage } from './pages/parent/parent.module';
+import { HeadOfficeComponent } from './pertemuan 7/head-office/head-office.component';
+import { BranchOfficeSatuComponent } from './pertemuan 7/branch-office-satu/branch-office-satu.component';
+import { BranchOfficeDuaComponent } from './pertemuan 7/branch-office-dua/branch-office-dua.component';
+import { HeadOfficePageModule } from './pertemuan 7/head-office/head-office.module';
 
 @NgModule({
   declarations: [
     AppComponent,
     HomeComponent,
     LoginDashboardComponent,
-    ChildComponent,
-    ParentComponent,
     TextTransformPipe,
     MuridComponent,
     KelasComponent,
-    ReativeFormsComponent
+    ReativeFormsComponent,
+    BranchOfficeSatuComponent,
+    BranchOfficeDuaComponent
   ],
   imports: [
     BrowserModule,
     AppRoutingModule, 
     FormsModule,
     ReactiveFormsModule,
-    CommonModule
+    CommonModule,
+    ParentModulePage,
+    HeadOfficePageModule
   ],
   providers: [],
   bootstrap: [AppComponent]
