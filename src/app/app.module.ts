@@ -18,6 +18,8 @@ import { HeadOfficeComponent } from './pertemuan 7/head-office/head-office.compo
 import { BranchOfficeSatuComponent } from './pertemuan 7/branch-office-satu/branch-office-satu.component';
 import { BranchOfficeDuaComponent } from './pertemuan 7/branch-office-dua/branch-office-dua.component';
 import { HeadOfficePageModule } from './pertemuan 7/head-office/head-office.module';
+import { HttpClientModule } from '@angular/common/http';
+import { DisplayListComponent } from './pertemuan 8/display-list/display-list.component';
 
 @NgModule({
   declarations: [
@@ -29,7 +31,8 @@ import { HeadOfficePageModule } from './pertemuan 7/head-office/head-office.modu
     KelasComponent,
     ReativeFormsComponent,
     BranchOfficeSatuComponent,
-    BranchOfficeDuaComponent
+    BranchOfficeDuaComponent,
+    DisplayListComponent
   ],
   imports: [
     BrowserModule,
@@ -38,7 +41,8 @@ import { HeadOfficePageModule } from './pertemuan 7/head-office/head-office.modu
     ReactiveFormsModule,
     CommonModule,
     ParentModulePage,
-    HeadOfficePageModule
+    HeadOfficePageModule,
+    HttpClientModule
   ],
   providers: [],
   bootstrap: [AppComponent]

@@ -1,5 +1,6 @@
-import { Component } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
+import { ListServiceService } from '../../service/list-service.service';
 
 @Component({
   selector: 'app-head-office',
@@ -7,13 +8,23 @@ import { Router } from '@angular/router';
   templateUrl: './head-office.component.html',
   styleUrl: './head-office.component.scss'
 })
-export class HeadOfficeComponent {
+export class HeadOfficeComponent implements OnInit {
 
   routingDinamis: string = '';
+  country: any;
 
   constructor(
-    private router: Router
+    private router: Router,
+    private listService: ListServiceService
   ){}
+  ngOnInit(): void {
+    this.listService.getData().subscribe({
+      next: (result) => {
+        // console.log('result', result)
+        // this.country = result;
+      }
+    })
+  }
 
   cekLogin(){
  
@@ -39,5 +50,7 @@ export class HeadOfficeComponent {
   goToBranchDua(id: string){
     this.router.navigate(['/branchDua', id]);
   }
+
+  
 
 }

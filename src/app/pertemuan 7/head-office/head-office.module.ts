@@ -1,6 +1,7 @@
 import { NgModule } from "@angular/core";
 import { HeadOfficeComponent } from "./head-office.component";
 import { RouterModule, Routes } from "@angular/router";
+import { CommonModule } from "@angular/common";
 
 const routes: Routes = [
     {
@@ -11,7 +12,8 @@ const routes: Routes = [
 @NgModule({
     declarations: [HeadOfficeComponent],
     imports: [
-        RouterModule.forChild(routes)
+        RouterModule.forChild(routes),
+        CommonModule
     ]
 })
 export class HeadOfficePageModule{}
