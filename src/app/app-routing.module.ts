@@ -9,10 +9,11 @@ import { HeadOfficeComponent } from './pertemuan 7/head-office/head-office.compo
 import { BranchOfficeSatuComponent } from './pertemuan 7/branch-office-satu/branch-office-satu.component';
 import { BranchOfficeDuaComponent } from './pertemuan 7/branch-office-dua/branch-office-dua.component';
 import { DisplayListComponent } from './pertemuan 8/display-list/display-list.component';
+import { StateMgmComponent } from './pertemuan 9/state-mgm/state-mgm.component';
 
 const routes: Routes = [
   {
-    path: '', redirectTo: 'displayList', pathMatch: 'full'
+    path: '', redirectTo: 'state', pathMatch: 'full'
   },
   {
     path: 'parent',
@@ -42,6 +43,9 @@ const routes: Routes = [
   },
   {
     path: 'displayList', component: DisplayListComponent
+  },
+  {
+    path: 'state', component: StateMgmComponent
   }
 ];
 

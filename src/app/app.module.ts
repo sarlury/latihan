@@ -20,6 +20,7 @@ import { BranchOfficeDuaComponent } from './pertemuan 7/branch-office-dua/branch
 import { HeadOfficePageModule } from './pertemuan 7/head-office/head-office.module';
 import { HttpClientModule } from '@angular/common/http';
 import { DisplayListComponent } from './pertemuan 8/display-list/display-list.component';
+import { StateMgmComponent } from './pertemuan 9/state-mgm/state-mgm.component';
 
 @NgModule({
   declarations: [
@@ -32,7 +33,8 @@ import { DisplayListComponent } from './pertemuan 8/display-list/display-list.co
     ReativeFormsComponent,
     BranchOfficeSatuComponent,
     BranchOfficeDuaComponent,
-    DisplayListComponent
+    DisplayListComponent,
+    StateMgmComponent
   ],
   imports: [
     BrowserModule,
